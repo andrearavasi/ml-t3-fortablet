@@ -6,15 +6,26 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlserver"
-  url      = env("DATABASE_URL")
+    provider = "sqlserver"
+    url      = env("DATABASE_URL")
 }
 
-model Post {
-    id        Int      @id @default(autoincrement())
-    name      String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
+model Users {
+    id_user             Int      @id @default(autoincrement())
+    user_first_name     String
+    user_last_name      String
+    user_dt_ins         DateTime @default(now())
+    user_dt_last_update DateTime @updatedAt
+    user_email          String
 
-    @@index([name])
+    @@index([user_last_name])
+}
+
+model UserLogins {
+    id_user_login  Int      @id @default(autoincrement())
+    id_user        Int
+    login_first_dt DateTime
+    login_last_dt  DateTime
+
+    @@index([id_user])
 }
