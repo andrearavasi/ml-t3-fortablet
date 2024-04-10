@@ -10,22 +10,20 @@ datasource db {
     url      = env("DATABASE_URL")
 }
 
-model Users {
+model User {
     id_user             Int      @id @default(autoincrement())
     user_first_name     String
     user_last_name      String
     user_dt_ins         DateTime @default(now())
     user_dt_last_update DateTime @updatedAt
     user_email          String
-
-    @@index([user_last_name])
+    // logins              UserLogins[]
 }
 
 model UserLogins {
     id_user_login  Int      @id @default(autoincrement())
+    // user           User     @relation(fields: [id_user], references: [id_user_login]),
     id_user        Int
     login_first_dt DateTime
     login_last_dt  DateTime
-
-    @@index([id_user])
 }
