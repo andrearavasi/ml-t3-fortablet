@@ -4,7 +4,7 @@ import { text } from "stream/consumers";
 
 import { api } from "~/utils/api";
 
-export default async function Home() {
+export default function Home() {
   return (
     <>
       <Head>
@@ -16,9 +16,14 @@ export default async function Home() {
         <div className="bg-slate-200 gap-10 flex flex-col p-10 justify-evenly items-center rounded">
           <img rel="icon" src="/logo.png"></img>
           <div>
-            <div className="bg-slate-400 px-10 flex justify-center items-center rounded">
+            <div className="flex flex-col gap-10 justify-center items-center rounded min-w-100">
+              <div className="bg-slate-400 px-10 rounded">
+                <p>Accedi</p>
+              </div>
+              <div className="bg-slate-400 px-10 rounded">
+                <p>Registrati</p>
+              </div>
             </div>
-            <SignIn path="/sign-in" routing="path" signUpUrl="/sign-up" />
           </div>
         </div>
       </main>
