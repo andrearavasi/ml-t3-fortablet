@@ -13,14 +13,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen min-w-screen flex-col items-center justify-center bg-gradient-to-b from-slate-300 to-slate-700 gap-10">
-        <div className="bg-slate-200 gap-40 flex flex-col p-6 justify-evenly items-center rounded sm:w-96 md:w-max lg:w-max h-max">
-          <img rel="icon" src="/logo.png"></img>
+        <div className="bg-slate-200 gap-36 flex flex-col p-6 justify-evenly items-center rounded sm:w-96 md:w-max lg:w-max h-max">
+          <div className="flex items-center">
+            <img rel="icon" src="/logo.png"></img>
+          </div>
           <div className="w-full flex items-center justify-center">
-            <div className="flex flex-col gap-24 justify-center items-center rounded w-11/12">
-              <div className="bg-gradient-to-b from-slate-400 to bg-slate-300 w-full rounded flex justify-center items-center h-44 font-sans font-semibold text-3xl">
-                <Button size={"max"}>Accedi</Button>
+            <div className="flex flex-col gap-20 justify-center items-center rounded w-11/12">
+              <div className="bg-gradient-to-b from-slate-400 to bg-slate-300 w-full rounded flex justify-center items-center h-40 font-sans font-semibold text-3xl">
+                <Button size={"max"} >Accedi</Button>
               </div>
-              <div className="bg-gradient-to-b from-slate-300 to bg-slate-400 w-full rounded flex justify-center items-center h-44 font-sans font-semibold text-3xl">
+              <div className="bg-gradient-to-b from-slate-300 to bg-slate-400 w-full rounded flex justify-center items-center h-40 font-sans font-semibold text-3xl">
                 <Button size={"max"}>Registrati</Button>
               </div>
             </div>
