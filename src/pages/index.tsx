@@ -1,7 +1,7 @@
 import { SignIn, SignInButton, SignOutButton } from "@clerk/nextjs";
 import Head from "next/head";
 import { text } from "stream/consumers";
-
+import { Button } from "~/components/ui/button"
 import { api } from "~/utils/api";
 
 export default function Home() {
@@ -17,11 +17,11 @@ export default function Home() {
           <img rel="icon" src="/logo.png"></img>
           <div className="w-full flex items-center justify-center">
             <div className="flex flex-col gap-24 justify-center items-center rounded w-11/12">
-              <div className="bg-gradient-to-b from-slate-400 to bg-slate-300 px-10 w-full rounded flex justify-center items-center h-44 font-sans font-semibold text-3xl">
-                <p>Accedi</p>
+              <div className="bg-gradient-to-b from-slate-400 to bg-slate-300 w-full rounded flex justify-center items-center h-44 font-sans font-semibold text-3xl">
+                <Button size={"max"}>Accedi</Button>
               </div>
-              <div className="bg-gradient-to-b from-slate-300 to bg-slate-400 px-10 w-full rounded flex justify-center items-center h-44 font-sans font-semibold text-3xl">
-                <p>Registrati</p>
+              <div className="bg-gradient-to-b from-slate-300 to bg-slate-400 w-full rounded flex justify-center items-center h-44 font-sans font-semibold text-3xl">
+                <Button size={"max"}>Registrati</Button>
               </div>
             </div>
           </div>
