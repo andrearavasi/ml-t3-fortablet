@@ -13,9 +13,9 @@ const inter = Inter({
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <main className={`font-sans ${inter.variable}`}>
-      <ClerkProvider {...pageProps}>
-        <Component {...pageProps} />
-      </ClerkProvider>
+      {/* <ClerkProvider {...pageProps}> */}
+      <Component {...pageProps} />
+      {/* </ClerkProvider> */}
     </main>
   );
 };
